@@ -8,16 +8,16 @@ A script to generate a bunch random, pronounceable names
     python random_name.py [Limit] [Max-Length] [Min-Length] [Custom-String]
 	
 ####Limit
-Limit is the maximum number of names to generate, default is 10
+Limit is the maximum number of names to generate, Default is 10
 	
 ####Max-Length
-Half the maxiumm length of a name, default is 3
+Half the maxiumm length of a name, Default is `3`
 	
 ####Min-Length
-Half the minimum length of a name, default is `Max-Length` when available, 2 otherwise
+Half the minimum length of a name, Default is `Max-Length` when available, `2` otherwise
 	
 ####Custom-String
-A string of letters from which to create names from, default: All of the alphabet
+A string of letters from which to create names from, Default: All of the alphabet `a-z`
 
 
 ## Example output

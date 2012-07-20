@@ -24,14 +24,24 @@ print "Vowels used:", "".join(vowels)
 print "Consonants used:", "".join(consonants)
 
 def random_select(vow, con, count):
-	ret = []
-	for i in xrange(count):
-		ran = [random.choice(vow),random.choice(con)]
-		random.shuffle(ran)
-		ret.append("".join(ran))
-	return ret
+    '''Generate a  pronounceable name from the given vowels and consonants'''
+    ret = []
+    for i in xrange(count):
+        ran = []
+        if i>0:
+            '''Prevent two vowels or consonants from being together'''
+            if ret[i-1][1] in vowels:
+                ran = [random.choice(con), random.choice(vow)]
+            else:
+                ran = [random.choice(vow), random.choice(con)]
+        else: 
+            ran = [random.choice(vow), random.choice(con)]
+            random.shuffle(ran)
+        ret.append("".join(ran))
+    return ret
 	
 def random_select_n(vow, con, count, limit):
+    '''Itarate over random_select'''
     ret = []
     for i in xrange(limit):
         tmp = (random_select(vow, con, count))
