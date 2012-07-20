@@ -11,10 +11,10 @@ A script to generate a bunch random, pronounceable names
 Limit is the maximum number of names to generate, Default is 10
 	
 ####Max-Length
-Half the maxiumm length of a name, Default is `2`
+The maxiumm length of a name, Default is `2`
 	
 ####Min-Length
-Half the minimum length of a name, Default is `Max-Length` when available, `2` otherwise
+The minimum length of a name, Default is `Max-Length` when available, `2` otherwise
 	
 ####Custom-String
 A string of letters from which to create names from, Default: All of the alphabet `a-z`

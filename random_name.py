@@ -21,30 +21,33 @@ else: start = end-1
 
 print ""
 print "Limit:", limit
-print "Max-Length*:", end-1
-print "Min-Length*:", start
+print "Max-Length:", end-1
+print "Min-Length:", start
 print "Vowels used:", "".join(vowels)
 print "Consonants used:", "".join(consonants)
 
 def random_select(vow, con, count):
     '''Generate a  pronounceable name from the given vowels and consonants'''
     ret = []
-    for i in xrange(count):
+    i = 0
+    while i < count:
         ran = []
-        if i>0:
+        if i > 0:
             '''Prevent two vowels or consonants from being together'''
-            if ret[i-1][1] in vowels:
+            if ret[-1][-1] in vowels:
                 ran = [random.choice(con), random.choice(vow)]
             else:
                 ran = [random.choice(vow), random.choice(con)]
         else: 
             ran = [random.choice(vow), random.choice(con)]
             random.shuffle(ran)
-        ret.append("".join(ran))
-    return ret
+        ran = "".join(ran)
+        i+= len(ran)
+        ret.append(ran)
+    return "".join(ret)[:count]
 	
 def random_select_n(vow, con, count, limit):
-    '''Itarate over random_select'''
+    '''Iterate over random_select till limit is reached'''
     ret = []
     for i in xrange(limit):
         tmp = (random_select(vow, con, count))
