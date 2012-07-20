@@ -11,6 +11,7 @@ limit = 10
 if arglen>1: limit = int(sys.argv[1])
 if arglen>2: end = int(sys.argv[2])+1
 if arglen>3: start = int(sys.argv[3])
+else: start = end-1
 if arglen>4:
     user = str(sys.argv[4]).lower()
     if user[0]=="-":
@@ -23,7 +24,6 @@ if arglen>4:
     if len(vowels)==0: vowels = ['']
     consonants = filter(filter_func, consonants)
     if len(consonants)==0: consonants = ['']
-else: start = end-1
 
 print ""
 print "Limit:", limit
