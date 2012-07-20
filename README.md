@@ -5,7 +5,7 @@ A script to generate a bunch random, pronounceable names
 
 ## Usage
 
-    python random_name.py [Limit] [Max-Length] [Min-Length] [Use-Letters]
+    python random_name.py [Limit] [Max-Length] [Min-Length] [Use/Avoid-Letters]
 	
 ####Limit
 Limit is the maximum number of names to generate for each word-length, Default is 10
@@ -18,6 +18,7 @@ The minimum length of a name, Default is `Max-Length` when available, `2` otherw
 	
 ####Use-Letters or Avoid-Letters
 A string of letters from which to create names from, Default: All of the alphabet `a-z`
+
 Note: You can avoid letters instead of using them by adding a `-` at the begining
 
 
