@@ -25,6 +25,8 @@ A string of letters from which to create names from, default: All of the alphabe
 When called with
     
     python random_name.py 10 3 3
+    
+It may give
 
     injiro
     wiajuy
