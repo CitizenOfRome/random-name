@@ -21,7 +21,7 @@ else: start = end-1
 
 print ""
 print "Limit:", limit
-print "Max-Length*:", end
+print "Max-Length*:", end-1
 print "Min-Length*:", start
 print "Vowels used:", "".join(vowels)
 print "Consonants used:", "".join(consonants)
