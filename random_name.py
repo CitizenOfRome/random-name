@@ -20,9 +20,9 @@ if arglen>4:
         '''Use letters'''
         filter_func = lambda x: x in user
     vowels = filter(filter_func, vowels)
-    if len(vowels)==0: vowels = ['a', 'e', 'i', 'o', 'u']
+    if len(vowels)==0: vowels = ['']
     consonants = filter(filter_func, consonants)
-    if len(consonants)==0: consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+    if len(consonants)==0: consonants = ['']
 else: start = end-1
 
 print ""
